@@ -1,0 +1,35 @@
+Label,United States!!Total!!Estimate,United States!!Total!!Margin of Error,United States!!Percent!!Estimate,United States!!Percent!!Margin of Error
+Total households,"118,208,250","±155,130",(X),(X)
+TYPES OF COMPUTER,,,,
+    Has a computer,"102,589,480","±183,220",86.8%,±0.1
+        Desktop or laptop,"92,492,037","±211,423",78.2%,±0.1
+            Desktop or laptop alone,"13,346,024","±58,498",11.3%,±0.1
+        Handheld computer,"88,455,272","±166,849",74.8%,±0.1
+            Handheld computer alone,"9,296,413","±56,315",7.9%,±0.1
+        Other computer,"7,964,318","±59,454",6.7%,±0.1
+            Other computer alone,"241,648","±6,502",0.2%,±0.1
+    No computer,"15,618,770","±62,162",13.2%,±0.1
+TYPE OF INTERNET SUBSCRIPTIONS,,,,
+    With an Internet subscription:,"91,313,308","±190,613",77.2%,±0.1
+        Dial-up alone (no broadband subscription),"667,676","±12,579",0.6%,±0.1
+        With broadband subscription:,"90,645,632","±187,309",76.7%,±0.1
+            DSL,"14,786,484","±72,532",12.5%,±0.1
+                Mobile broadband,"45,031,832","±119,480",38.1%,±0.1
+                    Mobile broadband alone or with dialup,"7,213,791","±47,632",6.1%,±0.1
+                Cable modem,"48,444,157","±113,804",41%,±0.1
+                Fiber-optic,"7,515,585","±44,328",6.4%,±0.1
+                Satellite Internet service,"3,356,018","±27,101",2.8%,±0.1
+        Without an Internet subscription,"26,894,942","±79,163",22.8%,±0.1
+HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2015 INFLATION-ADJUSTED DOLLARS),,,,
+"Less than $20,000:","19,869,236","±58,704",(X),(X)
+        With dial-up Internet subscription alone,"122,782","±5,017",0.6%,±0.1
+        With a broadband Internet subscription,"9,692,275","±41,987",48.8%,±0.2
+        Without an Internet subscription,"10,054,179","±48,712",50.6%,±0.2
+"$20,000 to $74,999:","54,499,103","±105,270",(X),(X)
+        With dial-up Internet subscription alone,"382,003","±8,510",0.7%,±0.1
+        With a broadband Internet subscription,"40,436,056","±109,280",74.2%,±0.1
+        Without an Internet subscription,"13,681,044","±60,292",25.1%,±0.1
+"$75,000 or more:","43,839,911","±110,260",(X),(X)
+        With dial-up Internet subscription alone,"162,891","±5,561",0.4%,±0.1
+        With a broadband Internet subscription,"40,517,301","±112,028",92.4%,±0.1
+        Without an Internet subscription,"3,159,719","±30,535",7.2%,±0.1
