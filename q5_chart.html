@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.8.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}, "axisY": {"labelPadding": 15}, "title": {"anchor": "middle", "fontSize": 15, "offset": 14, "orient": "top"}}, "data": {"name": "data-762ecae17731f13269d51bd6006d4aa5"}, "mark": {"type": "line", "point": true}, "encoding": {"color": {"type": "nominal", "field": "Income", "scale": {"range": ["#96ceb4", "#ffcc5c", "#ff6f69"]}, "sort": null}, "x": {"type": "ordinal", "field": "Year"}, "y": {"type": "quantitative", "field": "Percent Internet", "title": "Percentage Households with Internet"}}, "height": 300, "title": "Internet Access of Different Household Income Levels", "width": 500, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-762ecae17731f13269d51bd6006d4aa5": [{"Income": "Less than $20,000", "Year": 2015, "Percent Internet": 48.8}, {"Income": "$20,000 to $74,999", "Year": 2015, "Percent Internet": 74.2}, {"Income": "$75,000 or more", "Year": 2015, "Percent Internet": 92.4}, {"Income": "Less than $20,000", "Year": 2016, "Percent Internet": 56.1}, {"Income": "$20,000 to $74,999", "Year": 2016, "Percent Internet": 79.6}, {"Income": "$75,000 or more", "Year": 2016, "Percent Internet": 94.3}, {"Income": "Less than $20,000", "Year": 2017, "Percent Internet": 59.3}, {"Income": "$20,000 to $74,999", "Year": 2017, "Percent Internet": 81.6}, {"Income": "$75,000 or more", "Year": 2017, "Percent Internet": 95.0}, {"Income": "Less than $20,000", "Year": 2018, "Percent Internet": 62.3}, {"Income": "$20,000 to $74,999", "Year": 2018, "Percent Internet": 83.0}, {"Income": "$75,000 or more", "Year": 2018, "Percent Internet": 95.3}, {"Income": "Less than $20,000", "Year": 2019, "Percent Internet": 64.2}, {"Income": "$20,000 to $74,999", "Year": 2019, "Percent Internet": 84.1}, {"Income": "$75,000 or more", "Year": 2019, "Percent Internet": 95.6}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
