@@ -1,6 +1,6 @@
 # Internet Access in the U.S. Across Different Demographics
-Melody Zhu and Kristy Nhan 
-CSE 163 Final Project
+###### Melody Zhu and Kristy Nhan 
+###### CSE 163 Final Project
 
 ## Reproducing Results
 1. Clone this repository using:
