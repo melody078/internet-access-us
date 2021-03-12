@@ -56,10 +56,10 @@ def plot(data_2015, data_2016, data_2017, data_2018, data_2019):
     income level, displaying how the percentage of households with internet
     for these income levels has changed over the years 2015-2019.
     """
-    combined = prepare(data_2015, data_2016, data_2017, data_2018, data_2019)
+    data = prepare(data_2015, data_2016, data_2017, data_2018, data_2019)
 
-    # Plot
-    q5_chart = alt.Chart(combined).mark_line(point=True).encode(
+    # Initial layer
+    chart = alt.Chart(data).mark_line(point=True).encode(
         x=alt.X('Year:O'),
         y=alt.Y(
             'Percent Internet',
@@ -72,8 +72,27 @@ def plot(data_2015, data_2016, data_2017, data_2018, data_2019):
     ).properties(
         width=500,
         height=300,
-        title='Internet Access of Different Household Income Levels'
-    ).configure_title(
+        title='Internet Access of Different Household Income Levels' +
+              ' (2015-2019)'
+    )
+
+    # Selection that chooses nearest point and selects based on year
+    nearest = alt.selection(type='single', nearest=True, on='mouseover',
+                            fields=['Year'])
+    # Transparent selectors across chart: tells us x-value of cursor
+    selectors = alt.Chart().mark_point().encode(
+        x="Year:O",
+        opacity=alt.value(0),
+    ).add_selection(
+        nearest
+    )
+    # Labels near points, displaying percent with internet access per income
+    text = chart.mark_text(align='left', dx=3, dy=-3).encode(
+        text=alt.condition(nearest, 'Percent Internet', alt.value(' '))
+    )
+
+    # Combine layers and plot
+    combined = alt.layer(chart, selectors, text, data=data).configure_title(
         fontSize=15,
         orient='top',
         offset=14,
@@ -82,4 +101,30 @@ def plot(data_2015, data_2016, data_2017, data_2018, data_2019):
         labelPadding=15
     )
 
-    q5_chart.save('q5_chart.html')
+    combined.save('q5_chart.html')
+
+
+def main():
+    # Load in data for testing purposes
+    data_2015 = pd.read_csv('data/dataset-2-2015.csv')
+    data_2016 = pd.read_csv('data/dataset-2-2016.csv')
+    data_2017 = pd.read_csv('data/dataset-2-2017.csv')
+    data_2018 = pd.read_csv('data/dataset-2-2018.csv')
+    data_2019 = pd.read_csv('data/dataset-2-2019.csv')
+
+    data = prepare(data_2015, data_2016, data_2017, data_2018, data_2019)
+    plot(data_2015, data_2016, data_2017, data_2018, data_2019)
+
+    # TESTING: check that percentages align with those plotted on line graph
+    # Refer to this file for testing documentation:
+    # https://docs.google.com/document/d/14rtCMhIXMW44TkX39KNcnKG_bM1Tr416BuGcN1sZrzE/edit?usp=sharing
+
+    print(data)
+
+    print(data.loc[0, 'Percent Internet'])
+    print(data.loc[6, 'Percent Internet'])
+    print(data.loc[14, 'Percent Internet'])
+
+
+if __name__ == '__main__':
+    main()

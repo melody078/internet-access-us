@@ -1,12 +1,12 @@
 """
 Performs data analysis to respond to our research question 4:
-'What can this data tells ua about educational attainment in relationship
-to internet access?'
+'How does educational attainment relate to internet access?'
 Creates a bar chart visualization of 5 urban and 5 rural counties' rates
 of attaining a Bachelor's Degree and proportion of no internet access.
 Urban and rural counties are pre-determined based on population density.
 """
 import altair as alt
+import pandas as pd
 
 
 def clean(data, counties):
@@ -101,7 +101,7 @@ def plot(data):
     ).properties(
       title={
           'text': ['Internet Access and Education Attainment in Urban vs. ' +
-                   'Rural Counties'],
+                   'Rural Counties (2016)'],
           'subtitle': ['', '.         Urban         Urban         Urban      '
                        + '   Urban         Urban         Rural          Rural'
                        + '          Rural          Rural          Rural'],
@@ -117,3 +117,26 @@ def plot(data):
     )
 
     q4_chart.save('q4_chart.html')
+
+
+def main():
+    # Load in data for testing
+    data_3 = pd.read_csv('data/dataset-3.csv')
+
+    counties = ['New York County', 'Chaves County']
+    cleaned = clean(data_3, counties)
+    cleaned = calculate_percentage(cleaned)
+
+    plot(data_3)
+
+    # TESTING: check that percentages align with those plotted
+    #   on the choropleth map
+    # Refer to this file for testing examples:
+    # https://docs.google.com/document/d/14rtCMhIXMW44TkX39KNcnKG_bM1Tr416BuGcN1sZrzE/edit?usp=sharing
+
+    print(cleaned[cleaned['County'] == 'New York County']['Percentage'])
+    print(cleaned[cleaned['County'] == 'Chaves County']['Percentage'])
+
+
+if __name__ == '__main__':
+    main()
