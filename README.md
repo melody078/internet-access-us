@@ -3,15 +3,15 @@
 ###### CSE 163 Final Project
 
 ## Results
-1. How has internet access in U.S. households, based on race, changed from 2015 to 2019?
+#### 1. How has internet access in U.S. households, based on race, changed from 2015 to 2019?
 ![Q1](results/q1_chart.png)
-2. Where in the U.S. is access to the internet least prevalent?
+#### 2. Where in the U.S. is access to the internet least prevalent?
 ![Q2](results/q2_chart.png)
-3. How does access to internet in the U.S. compare with global internet access?
+#### 3. How does access to internet in the U.S. compare with global internet access?
 ![Q3](results/q3_chart.png)
-4. How does educational attainment relate to internet access?
+#### 4. How does educational attainment relate to internet access?
 ![Q4](results/q4_chart.png)
-5. How has internet access in U.S. households, based on income, changed from 2015 to 2019?
+#### 5. How has internet access in U.S. households, based on income, changed from 2015 to 2019?
 ![Q5](results/q5_chart.png)
 
 ## Reproducing Results
