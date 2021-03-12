@@ -1,12 +1,12 @@
 # Internet Access in the U.S. Across Different Demographics
-###### Melody Zhu and Kristy Nhan 
+###### Melody Zhu and Kristy Nhan
 ###### CSE 163 Final Project
 
 ## Reproducing Results
 1. Clone this repository using: <br />
 	`git clone https://github.com/melody078/internet-access-us.git`
 2. Create an empty directory named 'data' inside the internet-access-us directory
-3. Download all the necessary datasets from this Google Drive folder, and move all data files into the empty 'data' directory just created https://drive.google.com/drive/folders/12NZwVOmTSZozcRgllK8lBFfCapokGWpW?usp=sharing
+3. Download all the necessary datasets from this Google Drive folder, and move all data files into the empty 'data' directory just created https://drive.google.com/drive/folders/1eLH4knOZ9dhRTQfkNmhycceGMTet6-zg?usp=sharing
 4. Install pandas and geopandas if needed using: <br />
 	`$ pip install pandas` <br />
 	`$ pip install geopandas`
