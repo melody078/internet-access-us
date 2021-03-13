@@ -43,7 +43,7 @@ def plot(world_map, data_4):
     # Plot
     q3_map = alt.Chart(merged).mark_geoshape().encode(
         color=alt.Color('Percentage:Q'),
-        tooltip=alt.Tooltip('Percentage')
+        tooltip=['name', 'Percentage']
     ).properties(
         title='Percentage of People with Internet Access by Country (2018)'
     ).configure_view(
