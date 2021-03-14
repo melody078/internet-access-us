@@ -81,6 +81,9 @@ def main():
     print(mongolia_percent)
     # refer to screenshot 3.3
 
+    print('Median:', merged['Percentage'].median())
+    print('Mean:', merged['Percentage'].mean())
+
 
 if __name__ == '__main__':
     main()
