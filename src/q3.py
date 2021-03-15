@@ -43,7 +43,7 @@ def plot(world_map, data_4):
     # Plot
     q3_map = alt.Chart(merged).mark_geoshape().encode(
         color=alt.Color('Percentage:Q'),
-        tooltip=alt.Tooltip('Percentage')
+        tooltip=['name', 'Percentage']
     ).properties(
         title='Percentage of People with Internet Access by Country (2018)'
     ).configure_view(
@@ -80,6 +80,9 @@ def main():
     mongolia_percent = merged[merged['name'] == "Mongolia"]['Percentage']
     print(mongolia_percent)
     # refer to screenshot 3.3
+
+    print('Median:', merged['Percentage'].median())
+    print('Mean:', merged['Percentage'].mean())
 
 
 if __name__ == '__main__':
