@@ -24,8 +24,10 @@
 	`pip install geopandas`
 5. Install altair using: <br />
 	`pip install altair`
-6. Run entire project using: <br />
-	`python main.py`
+6. Check that you are in the internet-access-us directory in the terminal <br />
+7. Run entire project using: <br />
+	`python src/main.py` <br />
+	 and run the main.py Python file in the terminal
 7. Each research question's visualization is saved as an html file in the internet-access-us directory, with a corresponding name (i.e. q1_chart.html). 
 	* To view these visualizations, drag the html file out to a browser and view them in the browser.
 	* Several of our visualizations are interactive--specifically, those for research questions 1, 3, and 5.
